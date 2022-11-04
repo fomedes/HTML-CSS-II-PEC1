@@ -1,5 +1,10 @@
+@use "sass:math";
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body {
@@ -7,7 +12,7 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  padding: 2rem;
+  padding: 1rem;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -15,10 +20,11 @@ body {
   color: $uoc-corporate;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
+.container {
+  max-width: 1000px;
+  margin-top: 2rem;
+  margin-inline: auto;
+  padding: $space-std;
   border-radius: 2rem;
   text-align: center;
   background-color: #fff;
@@ -26,32 +32,122 @@ body {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+.navbar{ 
+  margin-top: 0;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+  .navbar-right{
+    text-align: right;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.list-inline li{ 
+  display: inline;
+  text-transform: uppercase;
+  font-size: 20px;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  :link,
+  :hover,
+  :active,
+  :focus,
+  :visited {
+    text-decoration: none;
+    color: $uoc-corporate;
+  }
+
+  :hover {background-color: #e2c53d;}
+
+  a {
+    padding: 15px;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding-block: $space-min;
+}
+
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-block-end: dashed 1px;
+}
+
+p{
+  font-size: 0.85rem;
+}
+
+.about-main {
+  column-gap: $space-std;
+  padding: $space-std;
+}
+
+.main-text {
+  text-align: left;
+  padding-bottom: $space-std;
+}
+
+.image-main {
+  max-width: 100%;
+  border-radius: 2rem;
+}
+
+@media (min-width: $mqMedWidth) {
+  .about-main {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-text,
+  .image-main{max-width: 50%;}
+}
+
+.btn {
+  margin-bottom: math.div($space-std,2);
+  margin-inline: math.div($space-std,2);
+  background-color: #e2c53d;
+  color: rgba(0, 0, 0, 0.8);
+  width: 10rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.15rem;
   text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.image-portfolio {
+  max-width: 80%;
+  margin-block: $space-std;
+  border-radius: 2rem;
+}
+
+.resume {
+  margin-block: $space-std;
+
+  .resume-content {
+    padding-block: $space-std;
+  }
+}
+
+.fa-brands,
+.fa-light{
+  font-size: 30px;
+  color: grey;
 }
