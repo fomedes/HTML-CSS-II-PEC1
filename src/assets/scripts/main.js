@@ -10,7 +10,8 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+function ShowResume() {
+  document.getElementById("Resume").classList.remove('hidden');
+  document.getElementById("About").classList.add('hidden');
+  document.getElementById("Portfolio").classList.add('hidden');
+}

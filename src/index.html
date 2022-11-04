@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <script src="./assets/scripts/main.js"></script>
     <title>Homepage</title>
   </head>
   
   <body>
     <header>
       <nav class="container navbar">
-        <!-- <img class="logo navbar-left" src="./assets/images/logo.png">       -->
-        <ul class="list-inline navbar-right">
+        <ul class="list__inline navbar__right">
           <li><a href="">Home</a></li>
           <li><a href="#About">About</a></li>
           <li><a href="#Portfolio">Portfolio</a></li>
@@ -24,93 +24,98 @@
     <main>
       <div id="About" class="container">
         <h2>About me</h2>
-        <div class="about-main">
-          <div class="main-text">
+        <div class="about__main">
+          <div class="main__text">
             <p>Hi there! I'm</p>
             <h1>Frank Omedes</h1>
-            <p>I'm an ambitious and energetic hospitality manager looking for a change of career. I'm currently enrolled in a Master's Degree in Web development and Web apps scheduled to be completed during the next few months. I have knowledge in HTML5, CSS3 and Javascript and some skills in Drupal, Codeigniter and Laravel.</p>
+            <p>I'm an ambitious and energetic hospitality manager who decided to change his career. I'm currently enrolled in a Master's Degree in Web development and Web apps scheduled to be completed during the next few months. I have knowledge in HTML5, CSS3 and Javascript and some skills in Drupal, Codeigniter and Laravel.</p>
           </div>
-          <img class="image-main" src="./assets/images/image-main.jpg" title="Image by Freepik" alt="Developer coding">
+          <img class="image__main" src="./assets/images/image-main.jpg" title="Image by Freepik" alt="Developer coding">
         </div>
 
-        <div class="about-side">
-          <button class="btn" onclick="window.location.href='#Resume'" type="button">My Resume</button>
+        <div class="about__side">
+          <button class="btn" onclick="ShowResume()" type="button">My Resume</button>
           <button class="btn" type="button">Contact Me</button>
         </div>
       </div>
 
       <div id="Portfolio" class="container">
         <h2>My portfolio</h2>
-        <a href=""><img class="image-portfolio" src="./assets/images/portfolio1.jpg" title="Image by Freepik" alt="Design 1 of app from portfolio"></a>
-        <a href=""><img class="image-portfolio" src="./assets/images/portfolio2.jpg" title="Image by Freepik" alt="Design 2 of app from portfolio"></a>
-        <a href=""><img class="image-portfolio" src="./assets/images/portfolio3.jpg" title="Image by Freepik" alt="Design 3 of app from portfolio"></a>
+        <a href=""><img class="image__portfolio" src="./assets/images/portfolio1.jpg" title="Image by Freepik" alt="Design 1 of app from portfolio"></a>
+        <a href=""><img class="image__portfolio" src="./assets/images/portfolio2.jpg" title="Image by Freepik" alt="Design 2 of app from portfolio"></a>
+        <a href=""><img class="image__portfolio" src="./assets/images/portfolio3.jpg" title="Image by Freepik" alt="Design 3 of app from portfolio"></a>
       </div>
 
 
-      <div id="Resume" class="container">
+      <div id="Resume" class="container hidden">
         <h2>My resume</h2>
         <div class="resume">
           <div>
-            <h3><i class="fa-solid fa-graduation-cap"></i>EDUCATION</h3>
+            <h3><i class="fa-solid fa-graduation-cap resume__icon"></i>EDUCATION</h3>
           
-            <div class="resume-content">
-              Currently enrolled in a Master's Degree in Web Development and Web App - UOC, Spain
-              Bachelor's Degree in Public management and administration - University of Barcelona (UB), Spain.
+            <div class="resume__content resume__content--list">
+              <ul>
+                <li class="resume__content--list--entry">Currently enrolled in a Master's Degree in Web Development and Web App - UOC, Spain</li>
+                <li class="resume__content--list--entry">Bachelor's Degree in Public management and administration - University of Barcelona (UB), Spain.</li>
+              </ul>
             </div>
           </div>
           
           <div>
-            <h3><i class="fa-solid fa-briefcase"></i>EXPERIENCE</h3>
-            <div class="resume-content">
-              April 2021 - September 2021
-              General Manager - Gail's Bakery, Swain's Lane
-              <ul>
-                <li>Managing a team of 10 in a bakery & coffee shop with £1.2M turnover.</li>
-                <li>Overlooking rotas, making sure they are in the budget according to forecasted sales.</li>
-                <li>Responsible for trainings, health and safety, and food safety procedures.</li>
-                <li>Recruitment, staff development and team retention.</li>
-                <li>Sales reports, cost control and stock control.</li>
-              </ul>
-            </div>
-            <div>
-              May 2019 - October 2020
-              Restaurant Manager - Benugo, Regents Park
-              <ul>
-                <li>Managing a team of up to 60 people, up to 5 supervisors within three units: a restaurant café, a food kiosk and a food & ice cream kiosk.</li>
-                <li>Rotas according to forecasts.</li>
-                <li>In charge of team trainings.</li>
-                <li>Responsible for results of both internal and external quality and safety audits.</li>
-                <li>Working in high volume operations, dealing with high pressure during peak time.</li>
-                <li>Recruitment, staff development and team retention.</li>
-                <li>Sales reports, taking part in creating P&L, business plan and forecasting sales.</li>
-                <li>Cost control - labour, stock control.</li>
-                <li>Supporting HR head office department from March 2020 as staffing manager for the whole company.</li>
-              </ul>
-            </div>
-          
-            <div>
-              April 2017 - May 2019
-              Warehouse and Maintenance Manager - Benugo, Science Museum
-              <ul>
-                <li>Managing the warehouse team on a 4 million pounds catering business.</li>
-                <li>Budgeting the goods expenditure following a weekly forecast.</li>
-                <li>Controlling costs and developing plans to reduce them while maintaining high standards.</li>
-                <li>Responsible for health and safety trainings and risk assessments training.</li>
-                <li>Maintaining contact with contractors to organize equipment maintenance and servicing as per needed.</li>
-                <li>Events planning and organization.</li>
-                <li>Purchasing and invoice control.</li>
-                <li>Admin duties: Payroll, sales mix and KPI reports.</li>
-              </ul>
-            </div>
-          
-            <div>
-              March 2016 - April 2017
-              Assistant Warehouse Manager - Benugo, Barbican Centre
-            </div>
-          
-            <div>
-              April 2014 - March 2016
-              Warehouse Team Leader- Benugo, Science Museum
+            <h3><i class="fa-solid fa-briefcase resume__icon"></i>EXPERIENCE</h3>
+            <div class="resume__content">
+              <div class="resume__content--list">
+                <h4>January 2022 - Present</h4>
+                <h5>Barista - Gail's Bakery</h5>
+              </div>
+              <div class="resume__content--list">
+                <h4>April 2021 - September 2021</h4>
+                <h5>General Manager - Gail's Bakery, Swain's Lane</h5>
+                <ul>
+                  <li  class="resume__content--list--entry">Managing a team of 10 in a bakery & coffee shop with £1.2M turnover.</li>
+                  <li  class="resume__content--list--entry">Overlooking rotas, making sure they are in the budget according to forecasted sales.</li>
+                  <li  class="resume__content--list--entry">Responsible for trainings, health and safety, and food safety procedures.</li>
+                  <li  class="resume__content--list--entry">Recruitment, staff development and team retention.</li>
+                  <li  class="resume__content--list--entry">Sales reports, cost control and stock control.</li>
+                </ul>
+              </div>
+              <div class="resume__content--list">
+                <h4>May 2019 - October 2020</h4>
+                <h5>Restaurant Manager - Benugo, Regents Park</h5>
+                <ul>
+                  <li  class="resume__content--list--entry">Managing a team of up to 60 people, up to 5 supervisors within three units: a restaurant café, a food kiosk and a food & ice cream kiosk.</li>
+                  <li  class="resume__content--list--entry">Rotas according to forecasts.</li>
+                  <li  class="resume__content--list--entry">In charge of team trainings.</li>
+                  <li  class="resume__content--list--entry">Responsible for results of both internal and external quality and safety audits.</li>
+                  <li  class="resume__content--list--entry">Working in high volume operations, dealing with high pressure during peak time.</li>
+                  <li  class="resume__content--list--entry">Recruitment, staff development and team retention.</li>
+                  <li  class="resume__content--list--entry">Sales reports, taking part in creating P&L, business plan and forecasting sales.</li>
+                  <li  class="resume__content--list--entry">Cost control - labour, stock control.</li>
+                  <li  class="resume__content--list--entry">Supporting HR head office department from March 2020 as staffing manager for the whole company.</li>
+                </ul>
+              </div>
+              <div class="resume__content--list">
+                <h4>April 2017 - May 2019</h4>
+                <h5>Warehouse and Maintenance Manager - Benugo, Science Museum</h5>
+                <ul>
+                  <li  class="resume__content--list--entry">Managing the warehouse team on a 4 million pounds catering business.</li>
+                  <li  class="resume__content--list--entry">Budgeting the goods expenditure following a weekly forecast.</li>
+                  <li  class="resume__content--list--entry">Controlling costs and developing plans to reduce them while maintaining high standards.</li>
+                  <li  class="resume__content--list--entry">Responsible for health and safety trainings and risk assessments training.</li>
+                  <li  class="resume__content--list--entry">Maintaining contact with contractors to organize equipment maintenance and servicing as per needed.</li>
+                  <li  class="resume__content--list--entry">Events planning and organization.</li>
+                  <li  class="resume__content--list--entry">Purchasing and invoice control.</li>
+                  <li  class="resume__content--list--entry">Admin duties: Payroll, sales mix and KPI reports.</li>
+                </ul>
+              </div>
+              <div class="resume__content--list">
+                <h4>March 2016 - April 2017</h4>
+                <h5>Assistant Warehouse Manager - Benugo, Barbican Centre</h5>
+              </div>
+              <div class="resume__content--list">
+                <h4>April 2014 - March 2016</h4>
+                <h5>Warehouse Team Leader - Benugo, Science Museum</h5>
+              </div>
             </div>
           </div>
         </div>
@@ -118,10 +123,10 @@
     </main>
 
     <footer class="container">
-      <ul class="list-inline">
-        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-        <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+      <ul class="list__inline">
+        <li><a href=""><i class="social-icon fa-brands fa-twitter"></i></a></li>
+        <li><a href=""><i class="social-icon fa-brands fa-instagram"></i></a></li>
+        <li><a href=""><i class="social-icon fa-brands fa-linkedin-in"></i></a></li>
       </ul>
     </footer>
   </body>

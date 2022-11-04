@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -11,47 +11,51 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin: 0;
   padding: 1rem;
+  margin: 0;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: $uoc-bg;
   color: $uoc-corporate;
+  background-color: $uoc-bg;
 }
 
 .container {
   max-width: 1000px;
-  margin-top: 2rem;
-  margin-inline: auto;
   padding: $space-std;
-  border-radius: 2rem;
+  margin-inline: auto;
+  margin-top: 2rem;
   text-align: center;
   background-color: #fff;
+  border-radius: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hidden {
+  display: none;
 }
 
 .navbar{ 
   margin-top: 0;
 
-  .navbar-right{
+  .navbar__right{
     text-align: right;
   }
 }
 
-.list-inline li{ 
+.list__inline li{ 
   display: inline;
-  text-transform: uppercase;
   font-size: 20px;
+  text-transform: uppercase;
 
   :link,
   :hover,
   :active,
   :focus,
   :visited {
-    text-decoration: none;
     color: $uoc-corporate;
+    text-decoration: none;
   }
 
   :hover {background-color: #e2c53d;}
@@ -62,11 +66,11 @@ body {
 }
 
 h1 {
-  text-transform: uppercase;
+  padding-block: $space-min;
   font-size: 1.5rem;
   font-weight: 600;
+  text-transform: uppercase;
   letter-spacing: 0.2rem;
-  padding-block: $space-min;
 }
 
 h2,
@@ -90,49 +94,49 @@ p{
   font-size: 0.85rem;
 }
 
-.about-main {
+.about__main {
   column-gap: $space-std;
   padding: $space-std;
 }
 
-.main-text {
-  text-align: left;
+.main__text {
   padding-bottom: $space-std;
+  text-align: left;
 }
 
-.image-main {
+.image__main {
   max-width: 100%;
   border-radius: 2rem;
 }
 
 @media (min-width: $mqMedWidth) {
-  .about-main {
+  .about__main {
     display: flex;
     align-items: center;
   }
 
-  .main-text,
-  .image-main{max-width: 50%;}
+  .main__text,
+  .image__main{max-width: 50%;}
 }
 
 .btn {
-  margin-bottom: math.div($space-std,2);
-  margin-inline: math.div($space-std,2);
-  background-color: #e2c53d;
-  color: rgba(0, 0, 0, 0.8);
   width: 10rem;
+  margin-inline: math.div($space-std,2);
+  margin-bottom: math.div($space-std,2);
   font-weight: 400;
   line-height: 2.5rem;
-  letter-spacing: 0.15rem;
+  color: rgba(0, 0, 0, 0.8);
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
-  border-radius: 2rem;
-  border: 0;
+  letter-spacing: 0.15rem;
+  vertical-align: middle;
   cursor: pointer;
+  background-color: #e2c53d;
+  border: 0;
+  border-radius: 2rem;
 }
 
-.image-portfolio {
+.image__portfolio {
   max-width: 80%;
   margin-block: $space-std;
   border-radius: 2rem;
@@ -141,13 +145,21 @@ p{
 .resume {
   margin-block: $space-std;
 
-  .resume-content {
+  .resume__content {
     padding-block: $space-std;
+    text-align: left;
+  }
+
+  .resume__content--list:not(:last-child) {padding-block-end: $space-std;}
+
+  .resume__content--list--entry {
+    list-style-position: inside;
+    list-style-type: disc;
   }
 }
 
-.fa-brands,
-.fa-light{
+.social-icon,
+.resume-icon{
   font-size: 30px;
-  color: grey;
+  color: $uoc-corporate;
 }
